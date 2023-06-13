@@ -11,17 +11,21 @@ struct stdMLC_vec2f{
     float y;
 };
 
-void MLC_vec2f_initZeroVec();
-void MLC_vec2f_init(float x,float y);
+mlc_vec2f* MLC_vec2f_initZeroVec();
+mlc_vec2f* MLC_vec2f_init(float x,float y);
 
 void MLC_vec2f_add(mlc_vec2f* a,mlc_vec2f* b);
 void MLC_vec2f_sub(mlc_vec2f* a,mlc_vec2f* b);
 void MLC_vec2f_mult(mlc_vec2f* a,float m);
-void MLC_vec2f_sub(mlc_vec2f* a,float m);
+void MLC_vec2f_subScaler(mlc_vec2f* a,float m);
+
+mlc_vec2f* MLC_vec2f_getAdd(mlc_vec2f* a,mlc_vec2f* b);
 
 float MLC_vec2f_magnitude(mlc_vec2f* a);
 mlc_vec2f* MLC_vec2f_getNormalize(mlc_vec2f* a);
 void MLC_vec2f_normalize(mlc_vec2f* a);
+
+float MLC_vec2f_dotProduct(mlc_vec2f* a, mlc_vec2f* b);
 
 void MLC_vec2f_destroy(mlc_vec2f* a);
 
